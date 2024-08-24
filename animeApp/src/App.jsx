@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import Popular from './components/Popular'
-import { useAnimeContext } from './context/Anime'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import AnimeIdentity from './components/AnimeIdentity'
+
 function App() {
-  const anime = useAnimeContext()
-  console.log(anime);
-  
+
   return (
-    <>
-      <div>
-        <Popular/>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Popular/>} />
+        <Route path='/anime/:id' element={<AnimeIdentity/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
