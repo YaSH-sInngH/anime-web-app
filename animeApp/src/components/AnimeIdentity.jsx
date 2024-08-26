@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 function AnimeIdentity() {
     // getting ID of the anime;
@@ -35,7 +35,7 @@ function AnimeIdentity() {
   return (
     <>
         <div className='text-white'>
-            <h1 className='p-4 text-center text-4xl font-bold'>{title}</h1>
+            <h1 className='p-6 text-4xl text-center font-bold'>{title}</h1>
             <div className='border-2 w-2/3 m-auto p-10 bg-slate-200 text-black'>
                 <div className='flex items-center'>
                     <div className='w-80 h-full'>
@@ -64,8 +64,8 @@ function AnimeIdentity() {
                     </p>
                 </div>
             </div>
-            <div className='w-2/3 m-auto flex flex-col justify-center'>
-                <h3 className='text-3xl my-10'>Trailer</h3>
+            <div className='m-auto flex flex-col items-center justify-center'>
+                <h3 className='text-3xl my-6 font-bold '>Trailer</h3>
                 <div>
                     {trailer?.embed_url && 
                         <iframe 
@@ -75,8 +75,24 @@ function AnimeIdentity() {
                             height='400'
                             allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                             allowFullScreen
-                            className='border-4'>
+                            className='bg-slate-300 border-8'>
                         </iframe>}
+                </div>
+            </div>
+            <div className='w-2/3 m-auto p-10'>
+                <h1 className='text-4xl text-center p-8 font-bold'>Characters</h1>
+                <div className='grid grid-cols-5 gap-5'>
+                    {characters?.map((character, index)=>{
+                        const {role} = character
+                        const {images, name, mal_id} = character.character
+                        return <Link to={`/character/${mal_id}`} key={index} className='border-4 hover:border-8 transition-all duration-150 bg-slate-100 text-black font-bold'>
+                            <div>
+                                <img src={images?.jpg.image_url} alt="image" className='w-full'/>
+                                <p>{name}</p>
+                                <p>{role}</p>
+                            </div>
+                        </Link> 
+                    })}
                 </div>
             </div>
         </div>

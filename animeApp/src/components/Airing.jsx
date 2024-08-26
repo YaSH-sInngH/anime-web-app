@@ -2,11 +2,11 @@ import React from 'react'
 import { useAnimeContext } from '../context/Anime'
 import { Link } from 'react-router-dom';
 
-function Popular({rendered}) {
-  const {popularAnime, isSearch, searchResults} = useAnimeContext();
+function Airing({rendered}) {
+  const {airingAnime, isSearch, searchResults} = useAnimeContext();
   const conditionalRender = ()=>{
-    if(!isSearch && rendered === 'popular'){
-      return popularAnime.map((anime)=>{
+    if(!isSearch && rendered === 'airing'){
+      return airingAnime.map((anime)=>{
         return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id} className='flex border-2 w-full h-96 hover:border-8 transition-all duration-150'>
             <img src={anime.images.jpg.large_image_url} alt="" className='w-full'/>
           </Link>
@@ -31,4 +31,4 @@ function Popular({rendered}) {
   )
 }
 
-export default Popular
+export default Airing
