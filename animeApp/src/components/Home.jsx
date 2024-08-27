@@ -31,7 +31,7 @@ function Home() {
   return (
     <>
         <div className=''>
-            <nav className='h-16 bg-cyan-200 flex flex-row items-center justify-center text-xl sticky top-0'>
+            <nav className='h-16 bg-white flex flex-row items-center justify-center text-xl sticky top-0'>
                 <div className='flex'>
                     <div className='mr-20 transition-all duration-150 p-1'>
                         <button onClick={()=>{
