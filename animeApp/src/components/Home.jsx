@@ -77,12 +77,6 @@ function Home() {
                     </form>
                 </div>
             </nav>
-            <div className='text-center p-5 text-3xl text-white underline'>
-                <h1>
-                    {rendered==='popular'?'Popular Anime':
-                    rendered==='airing'?'Airing Anime': 'Upcoming Anime'}
-                </h1>
-            </div>
             {switchComponent()}
         </div>
     </>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAnimeContext } from '../context/Anime'
 import { Link } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 function Airing({rendered}) {
   const {airingAnime, isSearch, searchResults} = useAnimeContext();
@@ -26,6 +27,7 @@ function Airing({rendered}) {
         <div className='grid grid-cols-5 m-12 gap-5 w-full'>
           {conditionalRender()}
         </div>
+        <Sidebar/>
       </div>
     </>
   )

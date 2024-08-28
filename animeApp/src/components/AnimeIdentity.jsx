@@ -67,7 +67,7 @@ function AnimeIdentity() {
             <div className='m-auto flex flex-col items-center justify-center'>
                 <h3 className='text-3xl my-6 font-bold '>Trailer</h3>
                 <div>
-                    {trailer?.embed_url && 
+                    {trailer?.embed_url ? 
                         <iframe 
                             src={trailer?.embed_url} 
                             title='inline example'
@@ -76,7 +76,9 @@ function AnimeIdentity() {
                             allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                             allowFullScreen
                             className='bg-slate-300 border-8'>
-                        </iframe>}
+                        </iframe> :
+                        <h1 className='text-white font-semibold text-xl text-center'>Oops! Trailer is not available, Sorry for the inconvenience.</h1>
+                    }
                 </div>
             </div>
             <div className='w-2/3 m-auto p-10'>
