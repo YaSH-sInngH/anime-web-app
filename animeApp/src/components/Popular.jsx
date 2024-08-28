@@ -24,7 +24,7 @@ function Popular({rendered}) {
   return (
     <>
       <div className='flex items-center justify-center'>
-        <div className='grid grid-cols-5 m-12 gap-5 w-full'>
+        <div className='grid grid-cols-5 m-6 gap-2 w-full'>
           {conditionalRender()}
         </div>
         <Sidebar/>
