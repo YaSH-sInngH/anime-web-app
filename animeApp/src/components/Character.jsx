@@ -29,9 +29,6 @@ function Character() {
   return (
     <>
         <div>
-            <div className='hover:underline text-white font-bold text-xl ml-20 mt-10 cursor-pointer'>
-                Back Home
-            </div>
             <div className='w-1/3 h-96 bg-slate-200 flex flex-row mx-auto items-center justify-center my-10'>
                 <div className='mr-20'>
                     <img src={pictures[index]?.jpg.image_url} alt="" className='w-full h-72 shadow-xl'/>
