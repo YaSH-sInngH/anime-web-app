@@ -40,9 +40,6 @@ function Character() {
                     <div>
                         <p className='text-lg p-1.5'><span className='p-2 font-bold'>Name:</span><span>{char?.name}</span></p>
                     </div>
-                    <div>
-                        <button className='w-full bg-red-500 p-2 rounded-lg hover:bg-red-600 outline-none font-medium transition-all duration-150'>Download Image</button>
-                    </div>
                 </div>
             </div>
             <div className='w-2/3 grid grid-cols-10 gap-5 m-10 mx-auto bg-slate-200 p-2'>
