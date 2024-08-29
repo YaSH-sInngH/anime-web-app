@@ -9,8 +9,8 @@ function Sidebar() {
     })
   return (
     <>
-        <div className='text-white w-1/6 mr-9 bg-black flex justify-center flex-col items-center p-6'>
-            <h1 className='text-center m-2 text-xl font-bold underline'>Top 5 Popular Anime</h1>
+        <div className='text-white w-1/6 mr-9 bg-neutral-200 flex justify-center flex-col items-center p-6'>
+            <h1 className='text-center m-2 text-xl font-bold underline text-black'>Top 5 Popular Anime</h1>
             <div className='grid grid-rows-1 gap-10 justify-items-center items-center'>
                 {sortedAnime?.slice(0,5).map((anime)=>{
                     return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id} className='bg-white border-4 hover:border-blue-500 border-white transition-all duration-150'>
