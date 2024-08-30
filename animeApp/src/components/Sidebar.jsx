@@ -9,7 +9,7 @@ function Sidebar() {
     })
   return (
     <>
-        <div className='text-white w-1/6 mr-9 bg-neutral-200 flex justify-center flex-col items-center p-6'>
+        <div className='text-white w-1/6 mr-9 bg-neutral-200 flex justify-center flex-col items-center p-6 hidden lg:flex'>
             <h1 className='text-center m-2 text-xl font-bold underline text-black'>Top 5 Popular Anime</h1>
             <div className='grid grid-rows-1 gap-10 justify-items-center items-center'>
                 {sortedAnime?.slice(0,5).map((anime)=>{
